@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Log Request Form</title>
+    <link rel="stylesheet" href="staffpage.css">
+</head>
+<body>
+    <div class="header">
+        <img src="WVAlogo.svg" alt="Logo">
+        <h1>IT Log Request Form</h1>
+    </div>
+    <div class="thin-bar"></div>
+    <div class="form-container">
+        <form id="jobForm" action="staffpage.php" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                    <div class="error-message">First name is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                    <div class="error-message">Last name is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" pattern="\S+@\S+\.\S+" autocomplete="off" required>
+                <div class="error-message">Valid email is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="location">Location of the Fault</label>
+                <input type="text" id="location" name="location" required>
+                <div class="error-message">Location is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="description">Brief Description</label>
+                <textarea id="description" name="description" required></textarea>
+                <div class="error-message">Description is required.</div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div id="confirmation-message" class="form-group success-message" style="display: none;">
+            Your request has been submitted.
+        </div>
+    </div>
+    <script src="staffpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #28a745; /* Thick bar color */
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.sub-bar {
+    background-color: #218838; /* Thin bar color */
+    height: 10px;
+}
+
+.logo {
+    height: 120px;
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Increase margin to lower the box */
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 300px; /* Adjust the width as needed */
+    margin: 50px auto; /* Center the container and lower it */
+}
+
+.button-container button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Button color */
+    color: white;
+    width: 100%; /* Make buttons equal width */
+    box-sizing: border-box;
+}
+
+.button-container button:hover {
+    background-color: #218838; /* Hover color */
+}

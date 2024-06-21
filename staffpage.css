@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px; /* Increase the header thickness */
+    position: relative;
+}
+
+.header img {
+    height: 155px; /* Increase the size of the logo */
+    position: absolute;
+    left: 5%; /* Position the logo 5% from the left */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Increase the font size of the header */
+}
+
+.thin-bar {
+    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 5px;
+    background-color: #388E3C;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align labels to the left */
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group textarea {
+    height: 150px; /* Increase the height of the textarea */
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #4CAF50;
+}
+
+.form-group input.error, .form-group textarea.error {
+    border-color: red;
+}
+
+.form-group .error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.form-group input.error + .error-message,
+.form-group textarea.error + .error-message {
+    display: block;
+}
+
+.form-group .success-message {
+    color: green;
+    font-size: 12px;
+    display: none;
+}
+
+.form-group:last-child {
+    text-align: center;
+    width: 100%; /* Ensure the form group spans the full width */
+}
+
+.form-group button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto; /* Center the button */
+}
+
+.form-group button:hover {
+    background-color: #45a049;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header img {
+        position: static;
+        margin-bottom: 10px;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+    .form-row .form-group {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .form-row .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
